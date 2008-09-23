@@ -6,11 +6,9 @@ set :deploy_to, "/var/www/webapps/testing-app"
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
-set :scm, :git
-set :repository,  "git://github.com/bwghughes/testing.git"
-set :scm_passphrase, "icbiatwt2"
-set :user, "bwghughes"
-set :branch, "master"
+set :repository, "file://." 
+set :deploy_via, :copy 
+set :scm, :git 
 
 # Machines
 set :user, "ben"
