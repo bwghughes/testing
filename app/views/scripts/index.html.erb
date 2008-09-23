@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Total steps</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+<% for script in @scripts %>
+  <% sexy_buttons do %>
+      <tr class="<%= cycle("even", "odd") %>">
+        <td><%=h script.name %></td>
+        <td><%=h script.total_steps %></td>
+        <td>&nbsp;<%=database_edit_button '', edit_script_path(script) %></td>
+        <td>&nbsp;&nbsp;&nbsp;<%=database_delete_button '', script, :confirm => 'Are you sure you want to delete this script?', :method => :delete %></td>
+      </tr>
+   <% end %>
+<% end %>
+</table>
+
+<br />
+

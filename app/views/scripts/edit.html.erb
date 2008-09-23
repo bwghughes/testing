@@ -1,0 +1,24 @@
+
+
+<% form_for(@script) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :class => "text"%>
+  </p>
+  <p>
+    <%= f.label :total_steps %><br />
+    <%= f.text_field :total_steps, :class => "text" %>
+  </p>
+  <p>
+    <% sexy_buttons do %>
+      <%= submit "Update"  %>
+      <%= cancel_button 'Cancel', scripts_path %>
+    <% end %>
+  </p>
+<% end %>
+
+<p>
+
+</p>

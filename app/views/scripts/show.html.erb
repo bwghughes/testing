@@ -1,0 +1,18 @@
+<h2>Thanks !!</h2>
+
+<h3>Just added:</h3>
+<p>
+  <b>Name:</b>
+  <%=h @script.name %>
+</p>
+
+<p>
+  <b>Total steps:</b>
+  <%=h @script.total_steps %>
+</p>
+<h3>Want to add more?</h3>
+
+<% sexy_buttons do %>
+<%= accept_button 'Yep', new_script_path %> 
+<%= cancel_button 'Nah', scripts_path %>
+<% end %>
